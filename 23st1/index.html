@@ -10,6 +10,14 @@
         Powierzchnia malowania
         <input type="number" id="ilosc">
         <button onclick="obliczPuszki()">Oblicz</button>
+        <p>Liczba potrzebnych puszek: <output id="wynik"></output></p>
     </main>
+    <script>
+        function obliczPuszki(){
+            let wartosc=document.getElementById("ilosc").value;
+            let liczbaPuszek=Math.ceil(wartosc/4);
+            document.getElementById("wynik").innerHTML=liczbaPuszek;
+        }
+    </script>
 </body>
 </html>
