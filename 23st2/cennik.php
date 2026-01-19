@@ -21,9 +21,26 @@
             $polacznie=mysqli_connect("localhost","root","","wynajem");
             if($polacznie){
                 echo "wszystko dziala";
+                $zapytanie="SELECT * FROM pokoje;";
+                $wynik=mysqli_query($polacznie,$zapytanie);
+                while($wiersz=mysqli_fetch_array($wynik)){
+            // echo $wiersz["nazwa"]."<br>";
+                echo "<tr>";
+                    echo "<td>";
+                        echo $wiersz["id"];
+                    echo "</td>";
+                    echo "<td>";
+                        echo $wiersz["nazwa"];
+                    echo "</td>";
+                    echo "<td>";
+                        echo $wiersz["cena"];
+                    echo "</td>";
+                echo "</tr>";
+                }
             }else{
                 echo "błąd połączenia";
             }
+            mysqli_close($polacznie);
         ?>
         </table>
     </section>
