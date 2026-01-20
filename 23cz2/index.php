@@ -13,6 +13,28 @@
     <section id="lewy">
     <h2>Nasze ceny</h2>    
     <!-- tutaj skrypt wypisujący tabele wykonany sanodzielnie -->
+     <table>
+        <?php
+            $conn=mysqli_connect("localhost","root","","sklep");
+            if($conn){
+                $query="SELECT nazwa,cena FROM towary LIMIT 4";
+                $result=mysqli_query($conn,$query);
+                while($row=mysqli_fetch_array($result)){
+                    echo "<tr>";
+                        echo "<td>";
+                            echo $row["nazwa"];
+                        echo "</td>";
+                        echo "<td>";
+                            echo $row["cena"];
+                        echo "</td>";
+                    echo "</tr>";
+                }
+                mysqli_close($conn);
+            }else{
+                echo "Brak połączenia";
+            }
+        ?>
+     </table>
     </section>
     <section id="srodkowy">
         <h2>Koszt zakupów</h2>
