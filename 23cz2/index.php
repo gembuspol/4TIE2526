@@ -30,6 +30,7 @@
             <br>
             <input type="submit" value="OBLICZ">
         </form>
+        <!-- tutaj pojawi się skrypt 2 -->
     </section>
     <section id="prawy">
         
