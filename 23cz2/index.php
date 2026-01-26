@@ -12,7 +12,7 @@
     </header>
     <section id="lewy">
     <h2>Nasze ceny</h2>    
-    <!-- tutaj skrypt wypisujący tabele wykonany sanodzielnie -->
+    <!-- tutaj skrypt wypisujący tabele wykonany samodzielnie -->
      <table>
         <?php
             $conn=mysqli_connect("localhost","root","","sklep");
@@ -43,8 +43,8 @@
             <select name="towary">
                 <option value="Zeszyt 60 kartek">Zeszyt 60 kartek</option>
                 <option value="Zeszyt 32 kartek">Zeszyt 32 kartek</option>
-                <option value="Cyrkiel">Cyrkiel</option>
-                <option value="Linijka 30 cm">Linijka 30 cm</option>
+                <option value="Coś">Cyrkiel</option>
+                <option value="Dominik chce CSS">Linijka 30 cm</option>
             </select>
             <br>
             <label>liczba sztuk: </label>
@@ -53,6 +53,13 @@
             <input type="submit" value="OBLICZ">
         </form>
         <!-- tutaj pojawi się skrypt 2 -->
+         <?php
+          if(!empty($_POST['towary'])){
+            $towary=$_POST['towary'];
+            $liczba=$_POST['liczba'];
+            echo $liczba." ".$towary;
+          }
+         ?>
     </section>
     <section id="prawy">
         
