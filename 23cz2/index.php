@@ -42,9 +42,9 @@
             <label>wybierz artykuł: </label>
             <select name="towary">
                 <option value="Zeszyt 60 kartek">Zeszyt 60 kartek</option>
-                <option value="Zeszyt 32 kartek">Zeszyt 32 kartek</option>
-                <option value="Coś">Cyrkiel</option>
-                <option value="Dominik chce CSS">Linijka 30 cm</option>
+                <option value="Zeszyt 32 kartki">Zeszyt 32 kartki</option>
+                <option value="Cyrkiel">Cyrkiel</option>
+                <option value="Linijka 30 cm">Linijka 30 cm</option>
             </select>
             <br>
             <label>liczba sztuk: </label>
@@ -57,7 +57,20 @@
           if(!empty($_POST['towary'])){
             $towary=$_POST['towary'];
             $liczba=$_POST['liczba'];
-            echo $liczba." ".$towary;
+            // echo $liczba." ".$towary;
+            $connect=mysqli_connect("localhost","root","","sklep");
+            if($connect){
+                $sql="SELECT cena FROM towary WHERE nazwa='".$towary."'";
+                $query=mysqli_query($connect,$sql);
+                while($row=mysqli_fetch_array($query)){
+                    echo "wartośc zakupów: ";
+                    echo $row['cena']*$liczba;
+                }
+                mysqli_close($connect);
+            }else{
+                echo "błąd połączenia;";
+            }
+
           }
          ?>
     </section>
