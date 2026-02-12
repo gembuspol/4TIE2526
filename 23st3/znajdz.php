@@ -36,7 +36,18 @@
             $baza=mysqli_connect("localhost","root","","kwiaciarnia");
             if($baza){
                 if(!empty($_POST["miasto"])){
-                    echo $_POST["miasto"];
+                    // echo $_POST["miasto"];
+                    $miasto=$_POST["miasto"];
+                    $sql="SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto='$miasto';";
+                    $zapytanie=mysqli_query($baza,$sql);
+                    while($wiersz=mysqli_fetch_array($zapytanie)){
+                        echo "<h3>";
+                        echo $wiersz['nazwa'];
+                        echo ", ";
+                        echo $wiersz['ulica'];
+                        echo "</h3>";
+                    }
+
                 }
                 
             }else{
