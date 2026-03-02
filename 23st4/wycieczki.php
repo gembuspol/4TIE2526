@@ -16,7 +16,26 @@
         <h3>Wycieszki, na które są wolne miejsca</h3>
         <ul>
             <!-- tutaj pojawi się skrypt -->
-            <li></li>
+             <?php
+                $polaczenie=mysqli_connect("localhost","root","","biuro");
+                if($polaczenie){
+                    $sql="SELECT id, dataWyjazdu, cel, cena FROM wycieczki WHERE dostepna=1;";
+                    $wynik=mysqli_query($polaczenie,$sql);
+                    while($wiersz=mysqli_fetch_array($wynik)){
+                        echo "<li>";
+                        echo $wiersz["id"];
+                        echo ". dnia";
+                        echo $wiersz["dataWyjazdu"];
+                        echo " jedziemy do ";
+                        echo $wiersz["cel"];
+                        echo ", cena: ";
+                        echo $wiersz["cena"];
+                        echo "</li>";
+                    }
+                }
+                mysqli_close($polaczenie);
+             ?>
+            
         </ul>
     </section>
     <section id="lewy">
