@@ -1,0 +1,17 @@
+*{
+    font-family: Helvetica;
+}
+header, footer{
+    background-color: #B3BC6D;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+#dane{
+    background-color: #ffffce;
+    color: olive;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 150px;
+    padding-right: 150px ;
+}
