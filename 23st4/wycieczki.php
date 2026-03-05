@@ -65,9 +65,17 @@
                 $zapytanie=mysqli_query($polaczenie,$sql);
                 while($wiersz=mysqli_fetch_array($zapytanie)){
                     echo "<img src='".$wiersz["nazwaPliku"]."' alt='".$wiersz["podpis"]."'>";
+                    //  echo '<img src="$wiersz["nazwaPliku"]" alt="$wiersz["podpis"]">';
                 }
             }
             // <img src='zdjecie.jpg' alt='tekst alternatywny'>
+            
+            
+            // <a href="strona.html">Nazwa strony</a>
+            // zamiast strona.html było $wiersz["strona"]
+            //zamiast nazwa stroby było $wiersz["nazwa"]
+            
+            
             mysqli_close($polaczenie);
          ?>
     </section>
