@@ -58,6 +58,18 @@
     <section id="srodkowy">
         <h2>Nasze zdjęcia</h2>
         <!-- tutaj pojawi się skrypt 2 -->
+         <?php
+            $polaczenie=mysqli_connect("localhost","root","","biuro");
+            if($polaczenie){
+                $sql="SELECT nazwaPliku,podpis FROM zdjecia ORDER BY podpis DESC;";
+                $zapytanie=mysqli_query($polaczenie,$sql);
+                while($wiersz=mysqli_fetch_array($zapytanie)){
+                    echo "<img src='".$wiersz["nazwaPliku"]."' alt='".$wiersz["podpis"]."'>";
+                }
+            }
+            // <img src='zdjecie.jpg' alt='tekst alternatywny'>
+            mysqli_close($polaczenie);
+         ?>
     </section>
     <section id="prawy">
         <h2>Skontaktuj się</h2>
