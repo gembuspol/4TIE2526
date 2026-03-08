@@ -73,8 +73,8 @@
             
             // <a href="strona.html">Nazwa strony</a>
             // zamiast strona.html było $wiersz["strona"]
-            //zamiast nazwa stroby było $wiersz["nazwa"]
-            
+            //zamiast nazwa strony było $wiersz["nazwa"]
+            echo "<a href='".$wiersz["strona"]."'>".$wiersz["nazwa"]."</a>";
             
             mysqli_close($polaczenie);
          ?>
