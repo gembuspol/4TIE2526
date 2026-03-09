@@ -1,0 +1,51 @@
+*{
+    font-style:  tahoma;
+}
+header{
+    background-color: #7dA453;
+    color: white;
+    height: 120px;
+    float: left;
+
+}
+#baner1{
+    width: 40%;
+}
+#baner2{
+     width: 40%;
+}
+#baner3{
+    width: 20%;
+}
+footer{
+    background-color: #7dA453;
+    color: white;
+    padding: 5px;
+    clear: both;
+}
+h5{
+    text-align: center;
+    float: left;
+}
+form{
+    padding-top: 50px;
+    float: left;
+}
+.kalendarz{
+    float: left;
+    background-color: #AED581;
+    width: 200px;
+    height: 100px;
+    margin: 7px;
+    border-radius: 1px;
+    border-color: #7dA453 ;
+    border-style: solid;
+
+}
+.kalendarz:hover{
+    background-color: #7dA453;
+    color: white;
+}
+main{
+    clear: both;
+}
