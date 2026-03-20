@@ -1,0 +1,28 @@
+*{
+    font-family: Garamond;
+    color: white;
+}
+header{
+    background-color: Indigo;
+    text-align: center;
+    padding: 2px;
+}
+#lewy, #prawy{
+    background-color: indigo;
+    height: 600px;
+    float: left;
+}
+main{
+    background-color: black;
+    height: 600px;
+    overflow: visible;
+    float: left;
+}
+@media screen and (min-width: 800px) {
+    #lewy, #prawy{
+        width: 20%;
+    }
+    main{
+        width: 60%;
+    }
+}
