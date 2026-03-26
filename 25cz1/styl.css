@@ -43,3 +43,17 @@ footer{
     border-radius: 50%;
     padding: 5px;
 }
+li{
+    margin: 3px;
+}
+.gry{
+    display: inline;
+    /* float: left; */
+    text-align: center;
+    padding: 3px;
+}
+/* input[type="text"], input[type="submit"]{ */
+input{
+    margin: 10px;
+    color:indigo;
+}
